@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256" />
+<title>الهيئة العامه للخدمات البيطرية</title>
+<link rel="stylesheet" media="all" type="text/css" href="en_style.css" />
+
+<!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="ie6.css"></link>
+<![endif]-->
+<script src="menu-collapsed.js" type="text/javascript" ></script>
+<script src="jquery-1.2.6.min.js" type="text/javascript" ></script>
+<script src="jquery-1.2.1.min.js" type="text/javascript" ></script>
+<script type="text/javascript">
+<!--
+var image1=new Image()
+image1.src="img/image1.jpg"
+var image2=new Image()
+image2.src="img/image2.jpg"
+var image3=new Image()
+image3.src="img/image3.jpg"
+var image4=new Image()
+image4.src="img/image4.jpg"
+var image5=new Image()
+image5.src="img/image5.jpg"
+var image6=new Image()
+image6.src="img/image6.jpg"
+//-->
+
+<!--
+//variable that will increment through the images
+var step=1
+function slideit(){
+//if browser does not support the image object, exit.
+if (!document.images)
+return;
+document.getElementById("sideshow").src=eval("image"+step+".src");
+//document.getElementById('sideshow').value= step;
+if (step<6)
+step++
+else
+step=1
+//call function "slideit()" every 2.5 seconds
+setTimeout("slideit()",5000)
+}
+	//-->
+</script>
+<script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+
+        .animate({opacity: 1}, 500, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 2000);
+});
+
+
+function ChangeSpeed(speed)
+{
+ elem = document.getElementById("GoveNews");
+ elem.scrollDelay=speed;
+}
+
+</script>
+</head>
+<body onload="slideit()" dir="ltr">
+<form id="form1" runat="server">
+<div id="govs">
+    <div id="logo"><div id="slideshow"><img class="logoimg active" src="img/logo.gif" width="95px" height="98px" alt="slideshow Image 1" /><img src="img/egypt_flag_orig.gif" alt="slideshow Image 2"/></div></div>
+	<div style="position:absolute;top:178px;z-index:3;width:200px; height:20px;"><p class="logop">الهيئة العامة للخدمات البيطرية</p></div>
+	<div id="banner">
+		<div id="mask"></div>
+		<img id="sideshow" src="img/image1.jpg" width="1004px" height="130px" alt=""/>
+		<div style="clear:both"></div>
+		<div>
+			<div id="bcontent">
+			<div style="visibility:hidden" class="search">
+				    
+				</div>
+				<div style="visibility:hidden" id="news">
+				    
+				</div>
+				<div id="homcntct">
+					<div id="home">
+						<a href="../en/Default.aspx"><img src="img/home.gif" width="41px" height="42px" alt="home" /></a>
+					</div>
+					<div id="contact">
+					
+						<a href="mailto:govs@govs.gov.eg"><img src="img/contact.gif" width="39px" height="42px" alt="" /></a>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="body" dir="rtl">
+		<div id="leftColumn" dir="rtl" >
+            <br /><br />
+			
+                
+   		</div>
+		
+		<div id="content" dir="ltr">
+		    <div style="float:left;text-align:right; width:100%;">
+		   
+            </div>
+			
+            </div>
+        
+		
+		<div class="menu" dir="rtl">
+			<div id="menuItems">
+				<ul id="menu">
+					<li class="mainlist"><a href="../en/About.aspx">About</a>
+					<ul>
+					    <li><a href="../en/History.aspx">History</a></li>	
+					    <li><a href="../en/Achivments.aspx">Acheivments</a></li>	
+					    <li><a href="../en/Goals.aspx">Goals</a></li>	
+					    <li><a href="../en/Activity.aspx">Activity</a></li>	
+					    <li><a href="../en/Organigram.aspx">Organigram </a></li>	
+					    <li><a href="../en/Mangers.aspx">Mangers</a></li>	
+					</ul>
+					</li>
+					
+					
+										
+					<li class="mainlist"><a href="../en/Laws.aspx">Legal Information</a></li>
+					<li class="mainlist"><a href="../en/Cooperation.aspx">International Cooperations</a></li>
+					<li class="mainlist"><a href="">Projects </a>
+					    <ul>
+					        <li><a href="../en/Old_Projects.aspx">Old Projects</a></li>
+					        <li><a href="../en/Current_Projects.aspx">Current Projects</a></li>
+					        <li><a href="../en/Future_Projects.aspx">Future Projects</a></li>
+					    </ul>
+					</li>	
+					<li class="mainlist"><a href="../en/Service.aspx">Service</a></li>													
+					<li class="mainlist"><a href="../en/Books.aspx">Books</a></li>
+					<li class="mainlist"><a href="../en/Publications.aspx">Publications</a></li>
+				
+				<li class="mainlist"><a href="../en/Governorate.aspx">Directorate</a></li>
+				</ul>
+			</div>
+			<img src="img/menubottom.gif" width="229px" height="23px" alt="" />
+		</div>
+	</div>
+</div>
+    <div id="footer">
+    	<div style="width:500px; margin:0 auto;text-align:center"><p style="font-weight:bold; font-family:Verdana, Geneva, sans-serif;padding:10px">جميع الحقوق محفوظة</p></div>
+    </div>
+    </form>
+</body>
+<script type="text/javascript">
+function initMenu() {
+$('#menu ul').hide();
+$('#menu li a').click(
+function() {
+var checkElement = $(this).next();
+if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+return false;
+}
+if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+$('#menu ul:visible').slideUp('normal');
+checkElement.slideDown('normal');
+return false;
+}
+}
+);
+}
+$(document).ready(function() {initMenu();});
+
+</script>
+</html>

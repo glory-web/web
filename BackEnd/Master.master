@@ -1,0 +1,114 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+<%@ Register Src="UserControls/NewMenue.ascx" TagName="NewMenue" TagPrefix="uc2" %>
+<%@ Register Src="UserControls/ControlPanelMenue.ascx" TagName="ControlPanelMenue"
+    TagPrefix="uc1" %>
+<%@ Register TagName="topnav" TagPrefix="tNav" Src="~/BackEnd/UserControls/topnav.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Language" content="ar-eg"><meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+    <meta name="Keywords" content="الهيئة العامة للخدمات البطرية, بيطرية,الهيئة">
+    <meta name="Description" content="لوحة التحكم الأساسية لموقع الهيئة العامة للخدمات البطرية">
+    <title>لوحة التحكم الأساسية لموقع الهيئة العامة للخدمات البطرية</title>
+    <link href="../CSS_JAVA/main.css" rel="stylesheet" type="text/css" />
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div style="text-align: center">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <table cellpadding="0" cellspacing="0" class="container_table bckgreen top20">
+                    <tr>
+                        <td class="corners lt">
+                            <img src="../Images/lt_top_crnr.gif" /></td>
+                        <td class="mdlcell" height="21">
+                        </td>
+                        <td class="corners rt">
+                            <img src="../Images/rt_top_crnr.gif" /></td>
+                    </tr>
+                    <tr>
+                        <td class="corners">
+                        </td>
+                        <td>
+                            <div class="cntr">
+                                <table cellpadding="0" cellspacing="0" style="width: 100%">
+                                    <tr>
+                                        <td class="lt">
+                                            <img src="../Images/logo.gif" /></td>
+                                        <td class="white mdl">
+                                            <table width="100%">
+                                                <tr>
+                                                    <td style="text-align: right; width: 433px;" dir="rtl">
+                                                        <span class="lightgreen mdl"></span>
+                                                        <asp:Label CssClass="lightgreen" ID="lblUserName" runat="server"></asp:Label>
+                                                        <asp:LinkButton ID="lnkLogout"  runat="server" CssClass="leftnav" OnClick="lnkLogout_Click">تسجيل الخروج</asp:LinkButton><br />
+                                                        &nbsp;</td>
+                                                    <td style="text-align: right" align="right">
+                                                        <span dir="rtl" style="color: #95c739">اسم المستخدم:</span></td>
+                                                </tr>
+                                                <tr runat="server" id="projectNameRow">
+                                                    <td style="height: 14px; text-align: right; width: 433px;" dir="rtl">
+                                                        <span class="lightgreen mdl"></span>
+                                                        <asp:Label ID="lblProjectName" runat="server" CssClass="lightgreen"></asp:Label>
+                                                    </td>
+                                                    <td style="height: 14px; text-align: right" align="right">
+                                                        <span dir="rtl" style="color: #95c739">اسم المنظمــــة:</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="rt">
+                                            <img src="../Images/logo_ICARDA.jpg" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="corners">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="corners navigation">
+                        </td>
+                        <td class="center navigation white btm">
+                            <asp:ContentPlaceHolder ID="TopNav" runat="server">
+                                <tNav:topnav ID="topnav1" runat="server" PnlShow="home" />
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td class="corners navigation">
+                        </td>
+                    </tr>
+                    <tr class="bckwhite">
+                        <td class="border_bck_lt lt bck_bodytop">
+                            <img src="../Images/body_top_lt.gif" /></td>
+                        <td class="content bck_bodytop">
+                            <table style="width: 873px; height: 148px">
+                                <tr>
+                                    <td colspan="2" style="height: 148px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                    <td style="width: 173px; height: 148px;">
+                                        <uc2:NewMenue ID="NewMenue1" runat="server" />
+                                        &nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="border_bck_rt rt bck_bodytop">
+                            <img src="../Images/body_top_rt.gif" /></td>
+                    </tr>
+                    <tr>
+                        <td class="corners lt btm">
+                            <img src="../Images/lt_btm_crnr.gif" /></td>
+                        <td>
+                        </td>
+                        <td class="corners rt btm">
+                            <img src="../Images/rt_btm_crnr.gif" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

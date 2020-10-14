@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+	<Group GroupTitle="بيانات المستخدمين">
+		<Page Path="Users.aspx" Title="بيانات المستخدمين"/>
+	</Group>
+	<Group GroupTitle="إعدادات الصفحة الرئيسية">
+		<Page Path="Boxs.aspx" Title="إعدادات القوائم الجانبية"/>
+		<Page Path="Bunners.aspx" Title="إعدادات الصور الرئيسية"/>
+	</Group>
+</Menu>

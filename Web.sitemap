@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="FrontEnd/ar/Default.aspx"  title="الصفحة الرئيسية"  description="">
+    <siteMapNode url="FrontEnd/ar/About.aspx" title="عن الهيئة"  description="" >
+      <siteMapNode url ="FrontEnd/ar/Achivments.aspx" title ="انجازات الهيئة" description ="" />
+      <siteMapNode url ="FrontEnd/ar/Activity.aspx" title ="أنشطة الهيئة" description ="أنشطة الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/History.aspx" title ="تاريخ الهيئة" description ="تاريخ الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/Goals.aspx" title ="أهداف الهيئة" description ="أهداف الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/Mangers.aspx" title ="مديري الهيئة" description ="مديري الهيئة" />
+    </siteMapNode>
+    <siteMapNode url="FrontEnd/ar/Projects.aspx" title="مشاريع الهيئة"  description="" >
+      <siteMapNode url ="FrontEnd/ar/Old_Projects.aspx" title ="مشاريع تم الانتهاء منها" description ="" />
+      <siteMapNode url ="FrontEnd/ar/Current_Projects.aspx" title ="مشاريع حالية" description ="أنشطة الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/Future_Projects.aspx" title ="مشاريع جديدة" description ="تاريخ الهيئة" />
+    </siteMapNode>
+    <siteMapNode url="FrontEnd/ar/Laws.aspx" title="معلومات قانونية"  description="" />
+    <siteMapNode url="FrontEnd/ar/Cooperation.aspx" title="التعاون الدولي"  description="" />
+    <siteMapNode url="FrontEnd/ar/Service.aspx" title="دليل خدمات الهيئة"  description="" />
+    <siteMapNode url="FrontEnd/ar/Books.aspx" title="الكتب"  description="" />
+    <siteMapNode url="FrontEnd/ar/Publications.aspx" title="المطبوعات"  description="" />
+    <siteMapNode url="FrontEnd/ar/Governorate.aspx" title="مديريات الطب البيطري"  description="" />
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,325 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AR_MasterPage.master.cs" Inherits="ar_AR_MasterPage" %>
+
+<%@ Register Src="../AR_Controls/Links.ascx" TagName="Links" TagPrefix="uc2" %>
+<%@ Register Src="../AR_Controls/News.ascx" TagName="News" TagPrefix="uc1" %>
+<%@ Register Src="../AR_Controls/Search.ascx" TagName="Search" TagPrefix="uc3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256" />
+<title>الهيئة العامه للخدمات البيطرية</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="ie6.css"></link>
+<![endif]-->
+
+<script src="menu-collapsed.js" type="text/javascript" ></script>
+<script src="jquery-1.2.6.min.js" type="text/javascript" ></script>
+<script src="jquery-1.2.1.min.js" type="text/javascript" ></script>
+<script src="jquery.activeMenu.js" type="text/javascript" ></script>
+
+<script type="text/javascript" >
+   
+var string ='<%= Session["BunnerNames"].ToString() %>';
+var count ='<%= Session["Count"].ToString() %>';
+        
+        var s =string;
+        var array = new Array();
+        var ImageObjectarray = new Array();
+        for (var i = 0; i < count; i++)
+        {
+            var end = s.lastIndexOf('#');
+            var temp = s.substring (0, s.lastIndexOf('#'));
+            var strat = temp.lastIndexOf("#");
+            
+            array[i]="../../GovsFiles/Bunners/"+ s.substring( strat +1 , end  );
+            s = s.substring(0, s.lastIndexOf('#')    );
+            
+        }
+        for (var i = 0; i < array.length; i++)
+        {
+            ImageObjectarray[i]=new Image()
+            ImageObjectarray[i].src=array[i]
+        }
+//<!--
+//variable that will increment through the images
+var step=0
+
+function slideit(){
+//if browser does not support the image object, exit.
+if (!document.images)
+return;
+document.getElementById("sideshow").src=ImageObjectarray[step].src
+
+//document.getElementById('sideshow').value= step;
+if (step < ImageObjectarray.length-1)
+step++
+else
+step=0
+//call function "slideit()" every 2.5 seconds
+setTimeout("slideit()",5000)
+}
+	//-->
+</script>
+
+
+<%-- *********** this script to change flag and logo ***********
+
+<script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+
+        .animate({opacity: 1}, 500, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 2000);
+});
+
+
+function ChangeSpeed(speed)
+{
+ elem = document.getElementById("GoveNews");
+ elem.scrollDelay=speed;
+}
+
+</script>
+--%>
+
+</head>
+<body onload="slideit()">
+<form id="form1" runat="server">
+    
+<div id="govs">
+	<div id="logo">
+	    <div id="slideshow" style="left: 0px; top: 0px"> <%-- "--%>  
+	        <img class="logoimg active" src="img/logo.gif" width="95px" height="98px" alt="slideshow Image 1" style="left: 91px; top: -3px" />
+            &nbsp;
+	
+        </div>
+    </div>
+    
+	<div style="position:absolute; top:178px;z-index:3;;width:220px; height:20px;">
+	<img src="img/Name.gif" alt="" />
+	<%--<p class="logop">الهيئة العامة للخدمات البيطرية</p>--%>
+	</div>
+	<div id="banner" style="font-size: 12pt">
+		<div id="mask"></div>
+		<img id="sideshow" src="img/image1.jpg" width="1004px" height="130px" alt=""/>
+		<div>
+			<div id="bcontent">
+			<div class="search" style="height: 22px">
+				    <uc3:Search ID="Search" runat="server" />
+                <%--<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">كل الاخبار</asp:LinkButton>--%>
+                </div>
+				<div id="news"> 
+				    <uc1:News ID="News1" runat="server" />
+				 </div>
+				
+				<div id="homcntct">
+					<%--<div id="home">
+						<a href="../ar/Default.aspx"><img src="img/home.gif" width="41px" height="42px" alt="" /></a>
+					</div>
+					<div id="contact">
+						<a href="mailto:govs@govs.gov.eg"><img src="img/contact.gif" width="39px" height="42px" alt=""/></a>
+					</div>--%>
+					
+	                <table>
+	                    <tr>
+	                        <td colspan="2">
+	                            <div id="flag">
+					                <img src="img/egypt_flag_orig.gif" alt="slideshow Image 2" style="width: 86px; height: 48px"/>
+					            </div>
+					        </td>
+				        </tr>
+	                    <tr>
+	                        <td align="left" style="width:90px">
+	                            <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton1_Click" CssClass="NewsBt" >:الأخـبـار</asp:LinkButton>
+	                        </td>
+	                        <td>
+	                            <div class="clr"></div>
+					            <asp:HyperLink Width="" CssClass="langStyle" runat="server" ID="EnglishHL" ></asp:HyperLink>
+					            <div></div>
+					        </td>
+	                    </tr>
+	                </table>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="body" dir="rtl" style="font-size: 12pt">
+
+	<div class="menu" dir="rtl">
+    <table>
+        <tr>
+            <td>
+			    <div id="menuItems">
+				    <ul id="menu">
+				        <li class="mainlist"><a href="../ar/Default.aspx">الرئيسية</a></li>
+					    <li class="mainlist"><a href="../ar/About.aspx">عن الهيئة</a>
+					        <ul class="sublist">
+					            <li class="mainlist"><a  href="../ar/History.aspx">تاريخ الهيئة</a></li>	
+					            <li class="mainlist"><a  href="../ar/Achivments.aspx">الإنجازات</a></li>
+					            <li class="mainlist"><a href="../ar/Goals.aspx">الاهداف</a></li>		
+					            <li class="mainlist"><a href="../ar/Activity.aspx">الأنشطة</a></li>	
+					            <li class="mainlist"><a href="../ar/Organigram.aspx">الهيكل التنظيمى</a></li>	
+					            <li class="mainlist"><a href="../ar/Mangers.aspx">رؤساء الهيئة</a></li>
+					        
+					        </ul>
+                        </li>									
+					
+					    <li class="mainlist"><a href="../ar/Laws.aspx">معلومات قانونية</a>
+					        <ul class="sublist">
+					            <li class="mainlist"><a  href="../ar/Laws.aspx">القوانين</a></li><%----%>
+					            <li class="mainlist"><a  href="../ar/Decs.aspx">القرارات</a></li>	<%----%>				        
+					        </ul>
+					    </li>
+					
+					    <li class="mainlist"><a href="../ar/Cooperation.aspx">التعاون الدولى</a></li>
+					    <li class="mainlist"><a href="../ar/Projects.aspx">مشاريع الهيئة</a>
+					        <ul class="sublist">
+					            <li class="mainlist"><a  href="../ar/Old_Projects.aspx">مشاريع تم الانتهاء منها </a></li>
+					            <li class="mainlist"><a  href="../ar/Future_Projects.aspx">مشاريع مستقبلية</a></li>
+					            <li class="mainlist"><a  href="../ar/Current_Projects.aspx">مشاريع حالية</a></li>
+					        </ul>
+					    </li>	
+					    <li class="mainlist"><a href="../ar/Service.aspx">دليل خدمات الهيئة</a></li>													
+					    <li class="mainlist"><a href="../ar/Books.aspx">المكتبة</a></li>
+					    <li class="mainlist"><a href="../ar/Publications.aspx">المطبوعات</a></li>
+				
+				        <li class="mainlist"><a href="../ar/Governorate.aspx">مديريات الطب البيطرى</a></li>
+				    <%--<li class="mainlist"><a href="../ar/NationalPrograms.aspx">يرامج المشروع القومي للترقيم والتسجيل</a></li>
+				        <li class="mainlist"><a href="../ar/ExpertSystems.aspx">النظم الخبيرة للصحة الحيوانية</a></li>--%>
+				        <li class="mainlist"><a href="../ar/AboutUS.aspx">اتصل بنا </a></li>
+				    </ul>
+				    <div class="MenuFooter"></div>
+				<%--<img  src="img/menubottom.gif" width="229px" height="10px" alt="" />--%>
+			    </div>
+			
+			</td>
+		</tr>
+		    <%--	<br />--%>
+		<tr>
+		    <td>
+                 <div class="SMenuBGul">
+			         <ul>
+			             <li><a href="../ar/NationalPrograms.aspx">البرنامج القومي للترقيم والتسجيل</a></li>
+			             <li><a href="../ar/ExpertSystems.aspx">النظم الخبيرة للصحة الحيوانية</a></li>
+			          </ul>
+			     
+			      <div class="MenuFooter"></div>  
+			     
+			      </div>                  
+			 </td>
+	    </tr>
+	    <tr>
+			 <td>
+			    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                </asp:ContentPlaceHolder>
+			 </td>
+	    </tr>
+	</table>		                        
+			
+	</div>
+	
+    <div id="bodyContent" class="content" runat="server" dir="rtl">
+		    <div class="navr"></div>
+		    <asp:SiteMapPath CssClass="navpath" ID="SiteMapPath1" runat="server" RenderCurrentNodeAsLink="True" SiteMapProvider = "XmlSiteMapProvider_ar">
+		        <PathSeparatorTemplate>
+		            <img style="margin:0px 5px" src="img/nav_arrow.gif" width="7px" height="12px" alt="" />
+		        </PathSeparatorTemplate>
+		    </asp:SiteMapPath>
+		    <div class="navl"></div>
+		    <div class="clr"></div>
+		    <br />
+		    <div class="main_content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+	
+	</div>
+    <div id="leftColumn" class="leftColumn" dir="rtl" runat="server" >
+		<table>
+		    <tr>
+		        <td>
+		            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                 </td>
+             </tr>
+             
+             <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    </asp:ContentPlaceHolder>
+                 </td>
+             </tr>
+			
+        </table>
+                
+   		</div>
+		<div style="clear:both"></div>
+</div>
+</div>
+    <div id="footer" style="height:30px; background-image:url(img/FootBG.jpg); background-repeat:repeat-x; font-size: 12pt;">
+    	<div style="width:800px; margin:0 auto;">
+    	<p style="font-weight:bold; font-size:smaller; font-family:Verdana, Geneva, sans-serif; text-align: center;">جميع الحقوق محفوظة للمعمل المركزي للنظم الخبيرة / أفضل تصفح للموقع بدقة 800 * 600</p></div>
+    </div>
+    </form>
+</body>
+
+
+<script type="text/javascript">
+// This function to creat the menu
+function initMenu() {
+
+$('#menu ul').hide();
+$('#menu li a').click(
+        function() 
+            {
+                var checkElement = $(this).next();
+                if((checkElement.is('ul')) && (checkElement.is(':visible'))) 
+                    {
+                       $('#menu ul:visible').slideUp('normal');     // Adding by khmonir
+                       return false;
+                    }
+                if((checkElement.is('ul')) && (!checkElement.is(':visible'))) 
+                    {
+                       $('#menu ul:visible').slideUp('normal');
+                       checkElement.slideDown('normal');
+                       return false;
+                    }
+            }
+);
+}
+
+$(document).ready(function(){initMenu();});
+</script>
+
+</html>

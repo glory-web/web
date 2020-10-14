@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="FrontEnd/en/Default.aspx"  title="Home Page"  description="">
+    <!--<siteMapNode url="FrontEnd/en/About.aspx" title="About"  description="" >-->
+      <siteMapNode url ="FrontEnd/en/Achivments.aspx" title ="Achievements" description ="Achievements" />
+      <siteMapNode url ="FrontEnd/en/Activity.aspx" title ="Activity" description ="Activity" />
+      <siteMapNode url ="FrontEnd/en/History.aspx" title ="History" description ="History" />
+      <siteMapNode url ="FrontEnd/en/Goals.aspx" title ="Mission" description ="Mission" />
+      <siteMapNode url ="FrontEnd/en/Mangers.aspx" title ="Chairmen &amp; Managers" description ="Chairmen &amp; Managers" />
+    <!--</siteMapNode>-->
+    <siteMapNode url="FrontEnd/en/Projects.aspx" title="Projects"  description="Projects" >
+      <siteMapNode url ="FrontEnd/en/Old_Projects.aspx" title ="Achieved Projects" description ="Achieved Projects" />
+      <siteMapNode url ="FrontEnd/en/Current_Projects.aspx" title ="Current Projects" description ="Current Projects" />
+      <siteMapNode url ="FrontEnd/en/Future_Projects.aspx" title ="Future Projects" description ="Future Projects" />
+      <siteMapNode url ="FrontEnd/ar/ProjectFiles.aspx" title ="Projects Files  " description ="Projects Files" />
+    </siteMapNode>
+    <siteMapNode url="FrontEnd/en/Laws.aspx" title="Laws"  description="" />
+    <siteMapNode url="FrontEnd/en/Decs.aspx" title="Decisions"  description="" />
+    <siteMapNode url="FrontEnd/en/Cooperation.aspx" title="Cooperation"  description="" />
+    <siteMapNode url="FrontEnd/en/Service.aspx" title="Service"  description="" />
+    <siteMapNode url="FrontEnd/en/Books.aspx" title="Library"  description="Library" />
+    <siteMapNode url="FrontEnd/en/Publications.aspx" title="Brochures"  description="Brochures" />
+    <siteMapNode url="FrontEnd/en/Governorate.aspx" title="Directorate"  description="Directorate" />
+    <siteMapNode url="FrontEnd/en/NewsDetails.aspx" title="News Details"  description="" />
+    <siteMapNode url="FrontEnd/en/SearchResult.aspx" title="Search Result"  description="" />
+
+    <siteMapNode url="FrontEnd/en/AboutUS.aspx" title="About US"  description="About US " />
+    <siteMapNode url="FrontEnd/en/NationalPrograms.aspx" title="National Programs"  description="National Programs" />
+    <siteMapNode url="FrontEnd/en/ExpertSystems.aspx" title="Expert Systems"  description="Expert Systems " />
+    <siteMapNode url="FrontEnd/en/Organigram.aspx" title="Organigram "  description="Organigram " >
+      <siteMapNode url ="FrontEnd/en/General_Governorate.aspx" title ="General Governorate " description ="General Governorate" />
+      <siteMapNode url ="FrontEnd/en/Central_Governorate.aspx" title ="Central Governorate " description ="Central Governorate" />
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>

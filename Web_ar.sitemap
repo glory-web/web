@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0"  >
+  <siteMapNode url="FrontEnd/ar/Default.aspx"  title="الصفحة الرئيسية"  description="">
+    <!--<siteMapNode url="FrontEnd/ar/About.aspx" title="عن الهيئة"  description="" >-->
+      <siteMapNode url ="FrontEnd/ar/Achivments.aspx" title ="انجازات الهيئة" description ="انجازات الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/Activity.aspx" title ="أنشطة الهيئة" description ="أنشطة الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/History.aspx" title ="تاريخ الهيئة" description ="تاريخ الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/Goals.aspx" title ="أهداف الهيئة" description ="أهداف الهيئة" />
+      <siteMapNode url ="FrontEnd/ar/Mangers.aspx" title ="رؤساء ومديري الهيئة" description ="رؤساء ومديري الهيئة" />
+    <!--</siteMapNode>-->
+    <siteMapNode url="FrontEnd/ar/Projects.aspx" title="مشاريع الهيئة"  description="مشاريع الهيئة" >
+      <siteMapNode url ="FrontEnd/ar/Old_Projects.aspx" title ="مشاريع تم الانتهاء منها" description ="مشاريع تم الانتهاء منها" />
+      <siteMapNode url ="FrontEnd/ar/Current_Projects.aspx" title ="مشاريع حالية" description ="مشاريع حالية" />
+      <siteMapNode url ="FrontEnd/ar/Future_Projects.aspx" title ="مشاريع جديدة" description ="مشاريع جديدة" />
+      <siteMapNode url ="FrontEnd/ar/ProjectFiles.aspx" title ="ملفات المشاريع " description ="ملفات المشاريع " />
+    </siteMapNode>
+    <siteMapNode url="FrontEnd/ar/Laws.aspx" title="معلومات قانونية"  description="معلومات قانونية" />
+    <siteMapNode url="FrontEnd/ar/Decs.aspx" title="قرارت قانونية"  description="قرارت قانونية" />
+    <siteMapNode url="FrontEnd/ar/Cooperation.aspx" title="التعاون الدولي"  description="التعاون الدولي" />
+    <siteMapNode url="FrontEnd/ar/Service.aspx" title="دليل خدمات الهيئة"  description="" />
+    <siteMapNode url="FrontEnd/ar/Books.aspx" title="المكتبة"  description="المكتبة" />
+    <siteMapNode url="FrontEnd/ar/Publications.aspx" title="المطبوعات"  description="المطبوعات" />
+    <siteMapNode url="FrontEnd/ar/Governorate.aspx" title="مديريات الطب البيطري"  description="مديريات الطب البيطري" />
+    <siteMapNode url="FrontEnd/ar/NewsDetails.aspx" title="تفاصيل الاخبار"  description="تفاصيل الاخبار" />
+    <siteMapNode url="FrontEnd/ar/SearchResult.aspx" title="نتائج البحث"  description="نتائج البحث" />
+    <siteMapNode url="FrontEnd/ar/AboutUS.aspx" title="اتصل بنا"  description="اتصل بنا" />
+    <siteMapNode url="FrontEnd/ar/NationalPrograms.aspx" title="برامج المشروع القومي"  description="برامج المشروع القومي" />
+    <siteMapNode url="FrontEnd/ar/ExpertSystems.aspx" title="النظم الخبيرة"  description="النظم الخبيرة" />
+    <siteMapNode url="FrontEnd/ar/Organigram.aspx" title="الهيكل التنظيمي"  description="الهيكل التنظيمي" >
+      <siteMapNode url ="FrontEnd/ar/General_Governorate.aspx" title ="الادارات العامة " description ="الادارات العامة " />
+      <siteMapNode url ="FrontEnd/ar/Central_Governorate.aspx" title ="الادارات المركزية" description ="الادارات المركزية" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

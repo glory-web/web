@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+	<Group GroupTitle="بيانات المنظمات" ForOrganization="0"  IsPublic="true">
+		<Page Path="OrganixationDate.aspx" Title="بيانات الجهات التابعة" IsPublic="true"/>
+		<Page Path="Governrates.aspx" Title="مديرية الطب البيطرى" IsPublic="false"/>
+	</Group>
+	<Group GroupTitle="بيانات الرؤساء" ForOrganization="0" IsPublic="true">
+		<Page Path="Managers.aspx" Title="بيانات الرؤساء" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="بيانات التعاون" ForOrganization="0" IsPublic="true">
+		<Page Path="Cooporations.aspx" Title="بيانات التعاون" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="بيانات المشاريع" ForOrganization="0" IsPublic="true">
+		<Page Path="Projects.aspx" Title="بيانات المشاريع" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="المكتبة" ForOrganization="0" IsPublic="true">
+		<Page Path="BookCategory.aspx" Title="تصنيفات المكتبة" IsPublic="true"/>
+		<Page Path="Books.aspx" Title="الكتب" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="بيانات الخدمات" ForOrganization="0" IsPublic="true">
+		<Page Path="ServiceType.aspx" Title="أنواع الخدمات" IsPublic="true"/>
+		<Page Path="Services.aspx" Title="الخدمات" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="الروابط الهامة" ForOrganization="0" IsPublic="true">
+		<Page Path="Links.aspx" Title="روابط هامة" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="بيانات النشرات" ForOrganization="2" IsPublic="true">
+		<Page Path="BrochureCategory.aspx" Title="أنواع النشرات" IsPublic="true"/>
+		<Page Path="Brochures.aspx" Title="النشرات" IsPublic="true"/>
+		
+	</Group>
+	<Group GroupTitle="بيانات الأخبار" ForOrganization="0" IsPublic="true">
+		<Page Path="NewsCategory.aspx" Title="تصنيفات الأخبار" IsPublic="true"/>
+		<Page Path="News.aspx" Title="الأخبار" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="بيانات القوانين و التشريعات" ForOrganization="3" IsPublic="true">
+		<Page Path="Law.aspx" Title="القوانين" IsPublic="true"/>
+		<Page Path="Legislation.aspx" Title="القرارات" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="البيانات المستخدم" ForOrganization="0" IsPublic="true">
+		<Page Path="ChangePassword.aspx" Title="تغيير كلمة المرور" IsPublic="true"/>
+	</Group>
+	<Group GroupTitle="إعدادات الصفحة الرئيسية" ForOrganization="1" IsPublic="false">
+		<Page Path="Users.aspx" Title="بيانات المستخدمين" IsPublic="false"/>
+		<Page Path="Boxs.aspx" Title="إعدادات القوائم الجانبية" IsPublic="false"/>
+		<Page Path="Bunners.aspx" Title="إعدادات الصور الرئيسية" IsPublic="false"/>
+	</Group>
+</Menu>

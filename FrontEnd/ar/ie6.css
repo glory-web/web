@@ -1,0 +1,6 @@
+/* CSS Document */
+#mask {background: transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
+     src='img/banner.png', sizingMethod='scale');}
+.search_in {z-index:1000}
+#homcntct  {left:40px;margin-top:0px}
+.langStyle {margin:0px 35px 0px 0px; position:relative;z-index:3000; cursor:pointer}

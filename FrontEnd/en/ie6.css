@@ -1,0 +1,3 @@
+/* CSS Document */
+#mask {background: transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
+     src='img/banner.png', sizingMethod='scale');}

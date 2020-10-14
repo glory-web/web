@@ -1,0 +1,54 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:GridView SkinID="GridView_Style_1" runat="server" 
+    CssClass="gridview_style"
+    HeaderStyle-CssClass="gridview_header" 
+    AlternatingRowStyle-CssClass="GridViewAltr"    
+    />
+
+<asp:GridView SkinID="mangers_grid" runat="server" 
+    CssClass="MangersGrid"
+    GridLines="none"
+    HeaderStyle-CssClass="" 
+    AlternatingRowStyle-CssClass="GridViewAltr"/> 
+    
+ <asp:GridView SkinID="links_grid" Runat="Server"        
+  CellPadding="0"
+  BorderWidth="0px"
+  CssClass="HighLights"
+  HeaderStyle-CssClass="LinkGridH"
+  ItemStyle-CssClass=""
+  AlternatingRowStyle-CssClass=""
+  GridLines="none"
+  RowStyle-BorderStyle="solid"
+  RowStyle-BorderWidth="0"
+  FooterStyle-CssClass="GridViewF"
+  FooterStyle-Height="1px" />
+   
+<%-- ****** General GridView ***** --%>
+<asp:GridView Runat="Server"        
+  CellPadding="0"
+  BorderWidth="0px"
+  CssClass="HighLights"
+  HeaderStyle-CssClass="GridViewH"
+  ItemStyle-CssClass=""
+  AlternatingRowStyle-CssClass=""
+  GridLines="none"
+  RowStyle-BorderStyle="solid"
+  RowStyle-BorderWidth="0"
+  FooterStyle-CssClass="GridViewF"
+  FooterStyle-Height="1px" />
